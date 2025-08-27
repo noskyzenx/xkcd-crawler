@@ -9,7 +9,6 @@ A Python script to automatically download XKCD comic images from https://xkcd.co
 - Uses XKCD's official JSON API for reliable data extraction
 - Supports downloading single comics or ranges
 - Skips already downloaded comics
-- Saves metadata (title, alt text, etc.) alongside images
 - Robust error handling and retry logic
 
 ## Requirements
@@ -88,20 +87,6 @@ python3 xkcd_crawler.py --delay 2.0 --start 1 --end 100
 The script creates an output directory (default: `xkcd_images`) containing:
 
 - **Image files**: Named as `XXXX_Comic_Title.ext` (e.g., `0001_Barrel_-_Part_1.png`)
-- **Metadata files**: JSON files with comic info (e.g., `0001_metadata.json`)
-
-### Metadata Format
-
-Each comic gets a metadata JSON file containing:
-```json
-{
-  "comic_num": 1,
-  "title": "Barrel - Part 1",
-  "alt_text": "Don't we all.",
-  "image_url": "https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg",
-  "filename": "0001_Barrel_-_Part_1.jpg"
-}
-```
 
 ## Examples
 

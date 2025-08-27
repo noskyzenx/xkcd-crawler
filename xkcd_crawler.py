@@ -148,20 +148,6 @@ class XKCDCrawler:
         
         if success:
             print(f"  Downloaded: {filename}")
-            
-            # Save metadata
-            metadata = {
-                "comic_num": comic_num,
-                "title": title,
-                "alt_text": alt_text,
-                "image_url": image_url,
-                "filename": filename
-            }
-            
-            metadata_file = self.output_dir / f"{comic_num:04d}_metadata.json"
-            with open(metadata_file, 'w', encoding='utf-8') as f:
-                json.dump(metadata, f, indent=2, ensure_ascii=False)
-            
             return {
                 "success": True, 
                 "comic_num": comic_num, 
