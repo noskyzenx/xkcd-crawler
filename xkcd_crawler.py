@@ -3,7 +3,9 @@
 XKCD Comic Crawler
 
 This script crawls XKCD comics and downloads their images.
-Usage: python xkcd_crawler.py [options]
+Usage: python3 xkcd_crawler.py [options]
+
+Requires Python 3.6+
 """
 
 import requests

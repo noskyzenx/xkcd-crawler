@@ -12,19 +12,31 @@ A Python script to automatically download XKCD comic images from https://xkcd.co
 - Saves metadata (title, alt text, etc.) alongside images
 - Robust error handling and retry logic
 
+## Requirements
+
+- Python 3.6+ (tested with Python 3.13)
+- Internet connection
+
 ## Installation
 
-1. Clone or download the script files
+1. Clone or download the script files:
+```bash
+git clone https://github.com/noskyzenx/xkcd-crawler.git
+cd xkcd-crawler
+```
+
 2. Install the required Python packages:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Or install manually:
 ```bash
-pip install requests beautifulsoup4
+pip3 install requests beautifulsoup4
 ```
+
+**Note**: Use `pip3` and `python3` commands for better compatibility across systems. Some systems may have `python` and `pip` commands available, but `python3` and `pip3` are more universally available.
 
 ## Usage
 
@@ -32,34 +44,34 @@ pip install requests beautifulsoup4
 
 Download all XKCD comics (from 1 to latest):
 ```bash
-python xkcd_crawler.py
+python3 xkcd_crawler.py
 ```
 
 ### Download Options
 
 Download comics 1-100:
 ```bash
-python xkcd_crawler.py --start 1 --end 100
-```
-
-Download a single comic:
-```bash
-python xkcd_crawler.py --single 353
+python3 xkcd_crawler.py --start 1 --end 100
 ```
 
 Download only the first 50 comics:
 ```bash
-python xkcd_crawler.py --max 50
+python3 xkcd_crawler.py --max 50
+```
+
+Download a single comic:
+```bash
+python3 xkcd_crawler.py --single 353
 ```
 
 Specify custom output directory:
 ```bash
-python xkcd_crawler.py --output /path/to/my/comics --start 1 --end 10
+python3 xkcd_crawler.py --output /path/to/my/comics --start 1 --end 10
 ```
 
 Adjust rate limiting (delay between requests):
 ```bash
-python xkcd_crawler.py --delay 2.0 --start 1 --end 100
+python3 xkcd_crawler.py --delay 2.0 --start 1 --end 100
 ```
 
 ### Command Line Options
@@ -95,17 +107,17 @@ Each comic gets a metadata JSON file containing:
 
 ### Download first 10 comics with custom settings
 ```bash
-python xkcd_crawler.py --start 1 --end 10 --output my_comics --delay 0.5
+python3 xkcd_crawler.py --start 1 --end 10 --output my_comics --delay 0.5
 ```
 
 ### Download specific range of comics
 ```bash
-python xkcd_crawler.py --start 100 --end 200
+python3 xkcd_crawler.py --start 100 --end 200
 ```
 
 ### Download just one comic to test
 ```bash
-python xkcd_crawler.py --single 1
+python3 xkcd_crawler.py --single 1
 ```
 
 ## Notes
